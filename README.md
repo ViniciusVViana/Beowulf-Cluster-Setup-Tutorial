@@ -312,13 +312,13 @@ The code is designed to print the node names and their ranks on the terminal of 
 Next step is to compile the code into an object file. For this, use the following command.
 
 ```
-mpicc -o hello.o hello.c
+mpicc -o hello hello.c
 ```
 
 This will compile the code into an object file. Now we can run the MPI program on the cluster. For this, enter the following code.
 
 ```
-mpiexec -n 12 -f hosts hello.c
+mpiexec -n 12 -f hosts hello
 ```
 
 Here, `-n 12` defines that the process should run on 12 threads and that `-f hosts` defines the file which contains the list of nodes to run the program on.
